@@ -18,7 +18,11 @@ import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity
 
-        implements NavigationView.OnNavigationItemSelectedListener, DatosPersonales.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        DatosPersonales.OnFragmentInteractionListener,
+    TbasMapsFragment.OnFragmentInteractionListener,
+Map1.OnFragmentInteractionListener, Map2.OnFragmentInteractionListener,
+Map3.OnFragmentInteractionListener, Map4.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +93,8 @@ public class MainActivity extends AppCompatActivity
             f = new DatosPersonales();
             fragmentSeleccionado = true;
         } else if (id == R.id.maps) {
-
+            f = new TbasMapsFragment();
+            fragmentSeleccionado = true;
         } else if (id == R.id.exit) {
             finish();
         }
